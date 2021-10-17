@@ -60,6 +60,14 @@ public class StringCalculatorTest {
 			assertEquals(16, stringCalc.add("1\n3\n5\n6\n1"));
 		}
 		
+		@Test
+		@DisplayName("Test Add Method with String having unknown numbers split by custom delimiter")
+		void TestAddWithNumbersSeperatedCustomDelimiter() {
+			StringCalculator stringCalc = new StringCalculator();
+			assertEquals(3, stringCalc.add("//;\n1;2"));
+		}
+		
+		
 		
 		
 		
