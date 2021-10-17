@@ -12,7 +12,7 @@ public class StringCalculator {
 	public int add(String string) {
 		if (!string.isEmpty()) {
 			
-			List<Integer> numbers = Arrays.stream(string.split(","))
+			List<Integer> numbers = Arrays.stream(string.split(",|\n"))
 					.map(Integer::parseInt)
 					.collect(Collectors.toList());
 			return numbers.stream()
