@@ -25,9 +25,17 @@ public class StringCalculatorTest {
 
 		@Test
 		@DisplayName("Test Add Method with String having two numbers")
-		void TestAddWithTwoNumber() {
+		void TestAddWithTwoNumbers() {
 			StringCalculator stringCalc = new StringCalculator();
 			assertEquals(5, stringCalc.add("3,2"));
+			
+		}
+
+		@Test
+		@DisplayName("Test Add Method with String having three numbers")
+		void TestAddWithThreeNumbers() {
+			StringCalculator stringCalc = new StringCalculator();
+			assertEquals(9, stringCalc.add("1,3,5"));
 			
 		}
 		
