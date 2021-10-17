@@ -52,6 +52,13 @@ public class StringCalculatorTest {
 			StringCalculator stringCalc = new StringCalculator();
 			assertEquals(16, stringCalc.add("1,3\n5,6,1"));
 		}
+
+		@Test
+		@DisplayName("Test Add Method with String having unknown numbers seperated by new line instead of commas")
+		void TestAddWithNumbersSeperatedByNewLine() {
+			StringCalculator stringCalc = new StringCalculator();
+			assertEquals(16, stringCalc.add("1\n3\n5\n6\n1"));
+		}
 		
 		
 		
