@@ -38,6 +38,22 @@ public class StringCalculatorTest {
 			assertEquals(9, stringCalc.add("1,3,5"));
 			
 		}
+
+		@Test
+		@DisplayName("Test Add Method with String having unknown numbers")
+		void TestAddWithUnknownNumbers() {
+			StringCalculator stringCalc = new StringCalculator();
+			assertEquals(16, stringCalc.add("1,3,5,6,1"));
+		}
+
+		@Test
+		@DisplayName("Test Add Method with String having unknown numbers seperated by new line and commas")
+		void TestAddWithNumbersSeperatedByCommasAndNewLine() {
+			StringCalculator stringCalc = new StringCalculator();
+			assertEquals(16, stringCalc.add("1,3\n5,6,1"));
+		}
+		
+		
 		
 		
 		
