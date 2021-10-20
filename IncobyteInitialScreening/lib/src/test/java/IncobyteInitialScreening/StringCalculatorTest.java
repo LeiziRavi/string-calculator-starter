@@ -64,6 +64,12 @@ public class StringCalculatorTest {
 	void TestAddWithNumbersSeperatedCustomDelimiter() {
 		assertEquals(3, stringCalc.add("//;\n1;2"));
 	}
+	
+	@Test
+	@DisplayName("Test Add method to stop add after sum reaches 1000")
+	void TestAddWithSumOnlyUptoThousand() {
+		assertEquals(1010 , stringCalc.add("999,11,1000,2000"));
+	}
 
 	@Test
 	@DisplayName("Test Add Method to throw exception if number is negative")
