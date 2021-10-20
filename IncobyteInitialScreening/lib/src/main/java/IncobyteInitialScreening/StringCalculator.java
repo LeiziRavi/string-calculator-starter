@@ -12,10 +12,16 @@ public class StringCalculator {
 		if (!string.isEmpty()) {
 			List<Integer> numbers = stringArraytoIntegerList(getSplit(string));
 			negatives(numbers);
+			sumUptoThousand(numbers);
 			return numbers.stream().reduce(Integer::sum).orElseThrow();
 		}
 
 		return 0;
+	}
+	
+	private void sumUptoThousand(List<Integer> numbers){
+		List<Integer> list = numbers;
+		for(list)
 	}
 
 	private void negatives(List<Integer> numbers) {
